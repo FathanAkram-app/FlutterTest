@@ -1,3 +1,4 @@
+import 'package:first_flutter_app/shared/menu_bottom.dart';
 import 'package:first_flutter_app/shared/menu_drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -11,10 +12,10 @@ class IntroScreen extends StatelessWidget {
         drawer: const MenuDrawer(),
         body: Container(
           decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage('skal.png'),
-                fit: BoxFit.cover
-            )
+            // image: DecorationImage(
+            //     image: AssetImage(''),
+            //     fit: BoxFit.cover
+            // )
           ),
           child: Center(
             child: Container(
