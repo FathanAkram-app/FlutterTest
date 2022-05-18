@@ -7,8 +7,7 @@ class BmiFunctions{
 
   }
   double countBmiImperial(int height, int weight){
-    final double heightMeter = height/100;
-    return weight*703/(math.pow(heightMeter, 2));
+    return (weight/2.205)/(math.pow(height/39.37, 2));
 
   }
 }

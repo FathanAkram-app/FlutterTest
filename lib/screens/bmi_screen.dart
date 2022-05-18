@@ -55,16 +55,18 @@ class _BmiScreenState extends State<BmiScreen> with BmiFunctions{
           ),
           Text('Result : $result'),
           ElevatedButton(
-            onPressed: (){
-              setState(() {
-                result = (isMetric) ? countBmiMetric(int.parse(height.text),int.parse(weight.text)): countBmiImperial(int.parse(height.text),int.parse(weight.text));
-              });
-            }, 
+            onPressed: setResult, 
             child: const Text('Count')
           )
         ],
       ),
     ); 
+  }
+
+  void setResult(){
+    setState(() {
+      result = (isMetric) ? countBmiMetric(int.parse(height.text),int.parse(weight.text)): countBmiImperial(int.parse(height.text),int.parse(weight.text));
+    });
   }
 
   
