@@ -1,6 +1,10 @@
-import 'package:first_flutter_app/screens/bmi_screen.dart';
-import 'package:first_flutter_app/screens/intro_screen.dart';
+
 import 'package:flutter/material.dart';
+
+import '../screens/bmi_screen.dart';
+import '../screens/intro_screen.dart';
+import '../screens/news_screen.dart';
+import '../screens/shop_screen.dart';
 
 
 class MenuDrawer extends StatelessWidget {
@@ -19,15 +23,15 @@ class MenuDrawer extends StatelessWidget {
     final List<String> menuTitles = [
       'Home',
       'BMI Calculator',
-      'Weather',
-      'Training'
+      'News',
+      'Shop'
     ];
     List<Widget> menuItems = [];
     menuItems.add(
       const DrawerHeader(
-        decoration: BoxDecoration(color: Colors.blueGrey),
+        decoration: BoxDecoration(color: Colors.blue),
         child: Text(
-          'Globo Fitness',
+          'Fitness App',
           style: TextStyle(fontSize: 28,color: Colors.white),
         )
       )
@@ -47,8 +51,14 @@ class MenuDrawer extends StatelessWidget {
             case 'BMI Calculator':
               screens = const BmiScreen();
               break;
-            default:
+            case 'News':
+              screens = const NewsScreen();
+              break;
+            case 'Shop':
+              screens = const ShopScreen();
+              break;
           }
+
           Navigator.of(context).pop();
           Navigator.of(context).push(
             MaterialPageRoute(builder: (context) => screens)

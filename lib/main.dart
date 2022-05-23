@@ -1,5 +1,8 @@
+
 import 'package:first_flutter_app/screens/bmi_screen.dart';
 import 'package:first_flutter_app/screens/intro_screen.dart';
+import 'package:first_flutter_app/screens/news_screen.dart';
+import 'package:first_flutter_app/screens/shop_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +18,11 @@ class App extends StatelessWidget {
       theme: ThemeData(primarySwatch: Colors.blue),
       routes: {
         '/': ((context) => const IntroScreen()),
-        '/bmi': ((context) => const BmiScreen())
+        '/bmi': ((context) => const BmiScreen()),
+        '/news':(context) => const NewsScreen(),
+        '/shop':(context) => const ShopScreen(),
+        
+
       },
       initialRoute: '/',
     );

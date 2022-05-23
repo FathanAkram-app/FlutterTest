@@ -1,6 +1,7 @@
-import 'package:first_flutter_app/shared/menu_bottom.dart';
-import 'package:first_flutter_app/shared/menu_drawer.dart';
+
 import 'package:flutter/material.dart';
+
+import '../shared/menu_drawer.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class IntroScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('Globe Fitness')),
+        appBar: AppBar(title: const Text('Fitness App')),
         drawer: const MenuDrawer(),
         body: Container(
           decoration: const BoxDecoration(
@@ -32,7 +33,7 @@ class IntroScreen extends StatelessWidget {
                 ]
               ),
               child: const Text(
-                'Commit to be fit, dare to be great with this App',
+                'Test.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize:22,
@@ -43,7 +44,8 @@ class IntroScreen extends StatelessWidget {
                       color: Colors.grey
                     )
                   ]
-                ),)
+                ),
+              )
             )
           )
         ),

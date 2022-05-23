@@ -1,4 +1,4 @@
-import 'package:first_flutter_app/functions/bmi_functions.dart';
+
 import 'package:flutter/material.dart';
 
 class MenuBottom extends StatelessWidget {
@@ -12,7 +12,7 @@ class MenuBottom extends StatelessWidget {
               // Navigator.pushNamed(context,'/');
               break;
             case 1:
-              
+
               // Navigator.pushNamed(context,'/bmi');
               break;
           }
@@ -32,7 +32,8 @@ class MenuBottom extends StatelessWidget {
               
             ),
             label: 'Calculate'
-          )
+          ),
+          
         
           
         ],
